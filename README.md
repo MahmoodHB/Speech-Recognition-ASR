@@ -14,30 +14,16 @@ Made use of two different datasets:
 ## Audio files:
 Tested out the audio files by plotting out the waveform and a spectrogram to see the sample audio files.<br>
 **Waveform**
-![](images/wave.png?raw=true)
-<br>
-<br>
 **Spectrogram**<br>
-![](images/spec.png?raw=true)
-<br>
 
 ## Feature Extraction
 The next step involves extracting the features from the audio files which will help our model learn between these audio files.
 For feature extraction we make use of the [**LibROSA**](https://librosa.github.io/librosa/) library in python which is one of the libraries used for audio analysis. 
-<br>
-![](images/feature.png?raw=true)
-<br>
+
 * Here there are some things to note. While extracting the features, all the audio files have been timed for 3 seconds to get equal number of features. 
 * The sampling rate of each file is doubled keeping sampling frequency constant to get more features which will help classify the audio file when the size of dataset is small.
-<br>
 
 **The extracted features looks as follows**
-
-<br>
-
-![](images/feature2.png?raw=true)
-
-<br>
 
 These are array of values with lables appended to them. 
 
@@ -46,28 +32,14 @@ These are array of values with lables appended to them.
 Since the project is a classification problem, **Convolution Neural Network** seems the obivious choice. We also built **Multilayer perceptrons** and **Long Short Term Memory** models but they under-performed with very low accuracies which couldn't pass the test while predicting the right emotions.
 
 Building and tuning a model is a very time consuming process. The idea is to always start small without adding too many layers just for the sake of making it complex. After testing out with layers, the model which gave the max validation accuracy against test data was little more than 70%
-<br>
-<br>
-![](images/cnn.png?raw=true)
-<br>
 
 ## Predictions
-
 After tuning the model, tested it out by predicting the emotions for the test data. For a model with the given accuracy these are a sample of the actual vs predicted values.
-<br>
-<br>
-![](images/predict.png?raw=true)
-<br>
+
 
 ## Testing out with live voices.
 In order to test out our model on voices that were completely different than what we have in our training and test data, we recorded our own voices with dfferent emotions and predicted the outcomes. You can see the results below:
 The audio contained a male voice which said **"This coffee sucks"** in a angry tone.
-<br>
-![](images/livevoice.PNG?raw=true)
-<br>
-<br>
-![](images/livevoice2.PNG?raw=true)
-<br>
 
 ### As you can see that the model has predicted the male voice and emotion very accurately in the image above.
 
