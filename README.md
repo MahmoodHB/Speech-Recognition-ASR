@@ -58,6 +58,7 @@ The audio contained a male voice which said **"This coffee sucks"** in a angry t
 
 ## Conclusion
 Building the model was a challenging task as it involved lot of trail and error methods, tuning etc. The model is very well trained to distinguish between male and female voices and it distinguishes with 100% accuracy. The model was tuned to detect emotions with more than 90% accuracy. Accuracy can be increased by including more audio files for training.
+For more details please read the paper at: http://www.iieta.org/journals/ria/paper/10.18280/ria.340201 
 
 Corresponding email (e-mail: mahmood.bidir1985@gmail.com)
 
